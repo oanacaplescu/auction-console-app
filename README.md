@@ -16,3 +16,11 @@ D: 3 bids of 105, 115 and 90 euros
 E: 3 bids of 132, 135 and 140 euros
  
 The buyer E wins the auction at the price of 130 euros.
+
+
+Instructions:
+- open a PowerShell/git bash and navigate to it
+- run npm install - this allows installing all needed dependencies
+- run npm run build - to build the solution files
+- from here, you can run node src/main to run the initial main, with test cases I've added and see the results in the console + output files (located in /testFiles/outputFiles directory in the solution).
+- npm run test can also be ran to run the tests covering the code + edge cases - to be found on each of the project's components __tests__ folder; eg: src/auctionComputer/__tests__
