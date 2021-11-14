@@ -1,0 +1,28 @@
+{
+  "name": "auction-console-app",
+  "version": "1.0.0",
+  "description": "Solution to solve the Teads test: second-price, sealed-bid auction",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "@types/node": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc src/main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oanacaplescu/auction-console-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oanacaplescu/auction-console-app/issues"
+  },
+  "homepage": "https://github.com/oanacaplescu/auction-console-app#readme"
+}
