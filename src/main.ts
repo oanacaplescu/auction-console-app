@@ -7,15 +7,15 @@ const TEST_FOLDER = './testFiles/';
 
 const inputFiles = fs
   .readdirSync(TEST_FOLDER, { withFileTypes: true })
-  .filter(fileName => fileName.isFile())
-  .map(file => file.name);
+  .filter((file: fs.Dirent) => file.isFile())
+  .map((file: fs.Dirent) => file.name);
 
-inputFiles.forEach(inputFile => {
+inputFiles.forEach((inputFile: string, index: number) => {
   try {
-    if (inputFile.startsWith('test7')) {
+    if (inputFile.startsWith('test')) {
       const fileData = readDataFromInputFile('testFiles/' + inputFile);
       const bidWinner = computeBidWinner(fileData);
-      const outputFileName = writeDataInOutputFile(bidWinner, 1);
+      const outputFileName = writeDataInOutputFile(bidWinner, index + 1);
       log(`Successfully updated ${outputFileName} output file!`);
     }
   } catch (error) {
