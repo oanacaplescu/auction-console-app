@@ -16,7 +16,9 @@ inputFiles.forEach((inputFile: string, index: number) => {
       const fileData = readDataFromInputFile('testFiles/' + inputFile);
       const bidWinner = computeBidWinner(fileData);
       const outputFileName = writeDataInOutputFile(bidWinner, index);
-      log(`Successfully updated ${outputFileName} output file for data in input file ${inputFile}!`);
+      log(
+        `Successfully updated ${outputFileName} output file for data in input file ${inputFile}!`,
+      );
     }
   } catch (error) {
     log('An error has occurred: ' + error);
