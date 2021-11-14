@@ -100,7 +100,7 @@ describe('Winner computer tests', () => {
       ],
     };
     expect(() => computeBidWinner(bidData)).toThrow(
-      new Error('No winner has been found, no one bid the item\'s asked price'),
+      new Error("No winner has been found, no one bid the item's asked price"),
     );
   });
 });

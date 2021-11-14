@@ -74,12 +74,10 @@ describe('File parsers tests', () => {
     });
 
     it('Should throw error for one invalid bidder item in file', () => {
-        const fileName = 'testFiles/test8';
-  
-        expect(() => readDataFromInputFile(fileName)).toThrow(
-          new Error('Invalid bidder item'),
-        );
-      });
+      const fileName = 'testFiles/test8';
+
+      expect(() => readDataFromInputFile(fileName)).toThrow(new Error('Invalid bidder item'));
+    });
   });
 
   describe('writeDataInOutputFile', () => {
@@ -110,5 +108,5 @@ describe('File parsers tests', () => {
       };
       expect(() => writeDataInOutputFile(winner, 1)).toThrow(new Error('Incorrect winner content'));
     });
-});
+  });
 });

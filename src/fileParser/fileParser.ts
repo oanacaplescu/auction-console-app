@@ -82,7 +82,8 @@ export function writeDataInOutputFile(winner: Maybe<IBidder>, testCaseIndex: num
   fs.writeFileSync(
     outputFileName,
     `${winner.name} ${winner.winningPrice.amount} ${
-      IBidCurrency[winner.winningPrice.priceCurrency]}`
+      IBidCurrency[winner.winningPrice.priceCurrency]
+    }`,
   );
 
   return outputFileName;

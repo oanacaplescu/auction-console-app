@@ -2,7 +2,6 @@ import { IBidData, IBidder, IBidItem } from '../types/bidding.types';
 import { Maybe } from '../types/common.types';
 import { isEmptyArray } from '../utils/inputChecker';
 
-
 export function isObjectInvalid(item: IBidItem): boolean {
   return item.price.amount < 0 || !item.name;
 }
@@ -33,7 +32,7 @@ export function computeBidWinner(bidData: IBidData): Maybe<IBidder> {
   });
 
   if (!winner) {
-    throw new Error('No winner has been found, no one bid the item\'s asked price');
+    throw new Error("No winner has been found, no one bid the item's asked price");
   }
 
   if (maxNonWinningBidPrice === -1) {
