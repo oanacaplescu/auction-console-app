@@ -12,11 +12,11 @@ const inputFiles = fs
 
 inputFiles.forEach((inputFile: string, index: number) => {
   try {
-    if (inputFile.startsWith('test')) {
+    if (inputFile.includes('test')) {
       const fileData = readDataFromInputFile('testFiles/' + inputFile);
       const bidWinner = computeBidWinner(fileData);
-      const outputFileName = writeDataInOutputFile(bidWinner, index + 1);
-      log(`Successfully updated ${outputFileName} output file!`);
+      const outputFileName = writeDataInOutputFile(bidWinner, index);
+      log(`Successfully updated ${outputFileName} output file for data in input file ${inputFile}!`);
     }
   } catch (error) {
     log('An error has occurred: ' + error);
